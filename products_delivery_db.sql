@@ -9,7 +9,7 @@ CREATE TABLE clients
 (
     id           serial PRIMARY KEY,
     name         varchar(300) NOT NULL CHECK ( name != '' ),
-    address      varchar(300) NOT NULL CHECK ( address != '' ),
+    address      jsonb NOT NULL,
     phone_number varchar(20)  NOT NULL
 );
 
